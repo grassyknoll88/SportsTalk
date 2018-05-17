@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sports Talk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="signupstyles.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+</head>
+
+<body>
+  <div class="bodywrapper">
+
+    <form action="/signup" method="post">
+      <div class="sign">Sign Up</div>
+      <fieldset>
+        <div class="labelwrap2">
+          <div class="labelwrap">
+            <label for="name">Name</label>
+            <input required type="text" name="name" placeholder="name">
+          </div>
+          <div class="labelwrap">
+            <label for="email">Email</label>
+            <input type="text" name="email" placeholder="example@example.com">
+          </div>
+        </div>
+        <div class="labelwrap2">
+          <div class="labelwrap">
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="name">
+          </div>
+          <div class="labelwrap">
+            <label for="password">Password</label>
+            <input type="text" name="password" placeholder="password">
+          </div>
+        </div>
+        <div class="form__submit-button">
+          <input type="submit">
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="welcome">
+      <section class="headerwrapper">
+        <div>Welcome to</div>
+        <div class="sports">SportsTalk</div>
+      </section>
+      <section class="buttonwrapper">
+        <div class="signup">
+          <p>Not a member?</p>
+          <h2><a class="btn btn-light" href="/signup">sign up</a></h2>
+        </div>
+        <div class="login">
+          <p>Already a member?</p>
+          <h2><a class="btn btn-light"href="/login">log in</a></h2>
+        </div>
+      </section>
+    </div>
+
+
+
+
+  </div>
+</body>
+
+</html>

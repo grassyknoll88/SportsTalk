@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sports Talk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="newtalk.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navbar">
+    <span><a href="./home" style="color: white">home</a></span><span><a href="./newtalk"style="color:white">new post</a></span><span><a href="./liked"style="color:white">Likes</a></span><span>logged in as  {{#name}}{{.}}{{/name}}</span><span><a href="/logout"style="color:white">log out</a></span>
+  </div>
+  <div class="bodywrapper">
+    <form action="/newgab" method="post">
+      <div>
+        <div class="welcome">
+        <p>Welcome,{{#name}}{{.}}{{/name}} </p>
+
+      </div>
+      <div class="toplable">
+    
+      <div>What's new in sports?</div>
+      <fieldset>
+        <div class="labelwrap">
+          <input class="chattitle" type="text" name="chattitle" placeholder="Title">
+          <textarea class="chatbody" type="text" name="chatbody" placeholder="Write your post here"></textarea>
+        </div>
+        <div class="form__submit-button">
+          <input type="submit">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>

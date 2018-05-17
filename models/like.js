@@ -1,12 +1,8 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
-  var like = sequelize.define(
-    "like",
-    {
-      like: DataTypes.BOOLEAN
-    },
-    {}
-  );
+  var like = sequelize.define("like", {
+    like: DataTypes.BOOLEAN
+  });
   like.associate = function(models) {
     // associations can be defined here
     like.associate = function(models) {

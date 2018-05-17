@@ -5,7 +5,7 @@ var path = require("path");
 var expressValidator = require("express-validator");
 var mustacheExpress = require("mustache-express");
 var session = require("express-session");
-var db = require("./models/index.js");
+var db = require("./models/");
 var app = express();
 
 var PORT = process.env.PORT || 3000;
@@ -48,7 +48,7 @@ app.get("/login", function(req, res) {
 
 app.get("/login", function(req, res) {
   if (req.session && req.session.authenticated) {
-  db.models.user
+    db.user
       .findOne({
         where: {
           username: req.session.username,
@@ -72,10 +72,12 @@ app.get("/login", function(req, res) {
 });
 
 app.post("/login", function(req, res) {
+  console.log(req.body.username);
+  console.log(req.body.password);
   var username = req.body.username;
   var password = req.body.password;
 
-  db.models.user
+  db.user
     .findOne({
       where: {
         username: username,
@@ -83,7 +85,7 @@ app.post("/login", function(req, res) {
       }
     })
     .then(user => {
-      if (user.password == password) {
+      if (user && user.password == password) {
         req.session.username = username;
         req.session.userId = user.dataValues.id;
         req.session.authenticated = true;
@@ -98,15 +100,23 @@ app.post("/login", function(req, res) {
 });
 
 app.post("/signup", function(req, res) {
-  db.models.user.build({
+  // db.user.build({
+  //   name: req.body.name,
+  //   email: req.body.email,
+  //   username: req.body.username,
+  //   password: req.body.password
+  // });
+  // console.log(req.body);
+
+  var newUser = {
     name: req.body.name,
     email: req.body.email,
     username: req.body.username,
     password: req.body.password
-  });
+  };
   console.log(req.body);
 
-  user.save().then(function(user) {
+  db.user.create(newUser).then(function(user) {
     req.username = db.user.username;
     req.session.authenticated = true;
     res.redirect("/login");
@@ -115,7 +125,7 @@ app.post("/signup", function(req, res) {
 });
 
 app.post("/newtalk", function(req, res) {
-  var post = db.models.post.build({
+  var post = db.post.build({
     userId: req.session.userId,
     title: req.body.gabtitle,
     body: req.body.gabbody
@@ -127,7 +137,7 @@ app.post("/newtalk", function(req, res) {
 });
 
 app.get("/home", function(req, res) {
-  db.models.post.findAll().then(function(posts) {
+  db.post.findAll().then(function(posts) {
     res.render("home", {
       posts: posts,
       name: req.session.username
@@ -136,7 +146,7 @@ app.get("/home", function(req, res) {
 });
 
 app.get("/newtalk", function(req, res) {
-  db.models.post.findAll().then(function(posts) {
+  db.post.findAll().then(function(posts) {
     res.render("newtalk", {
       posts: posts,
       name: req.session.username
@@ -145,7 +155,7 @@ app.get("/newtalk", function(req, res) {
 });
 
 app.post("/home", function(req, res) {
-  var post = db.models.post.build({
+  var post = db.post.build({
     title: (req.body.gabtitle = req.session.post),
     body: (req.body.gabbody = req.session.post)
   });
@@ -156,7 +166,7 @@ app.post("/home", function(req, res) {
 });
 
 app.post("/like", function(req, res) {
-  var like = db.models.like.build({
+  var like = db.like.build({
     like: true,
     userId: req.session.userId,
     postId: req.body.submitbtn
@@ -167,11 +177,11 @@ app.post("/like", function(req, res) {
 });
 
 app.get("/liked", function(req, res) {
-  db.models.like
+  db.like
     .findAll({
       include: [
         {
-          model: db.models.user,
+          model: db.user,
           as: "user"
         }
       ]

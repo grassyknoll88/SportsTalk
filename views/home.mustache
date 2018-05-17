@@ -8,12 +8,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="homestyles.css">
+  <link rel="stylesheet" href= "landing.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 </head>
 <body>
   <div class="navbar">
-    <span><a href="/home" style="color: yellow">home</a></span><span><a href="./newtalk"style="color:yellow">new post</a></span><span><a href="./liked"style="color:yellow">Likes</a></span><span>logged in as {{#name}}{{.}}{{/name}}</span><span><a href="/logout"style="color:yellow">log out</a></span>
+    <span><a href="/home" style="color: white">home</a></span><span><a href="./newtalk"style="color:white">new post</a></span><span><a href="./liked"style="color:white">Likes</a></span><span>logged in as {{#name}}{{.}}{{/name}}</span><span><a href="/logout"style="color:white">log out</a></span>
   </div>
 
 
@@ -22,7 +22,7 @@
     <ul>
       <div>
         <h3>Welcome, {{#name}}{{.}}{{/name}}</h3>
-        <h1 class="h1">Recent chatter</h1>
+        <h1 class="h1" style="color:green; font-size: 60px">Hot Take</h1>
       </div>
       <div class="postsdiv" style="overflow:auto;">
 

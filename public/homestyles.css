@@ -2,15 +2,19 @@
   transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 0.57);
   transition-duration: 0.1s;
 }
+body{
+  
+}
 
-a {
+/* a {
   text-decoration: none;
   color: inherit;
-}
+} */
 
 h3 {
   padding-right: 5vw;
-  font-family: "Pacifico", cursive;
+  font-family:'Noto Serif', serif;
+  font-size: 30px;
 }
 
 form {
@@ -26,14 +30,14 @@ form {
 .posttitle {
   font-weight: bold;
   font-size: 18px;
-  font-family: sans-serif;
+  font-family: 'Noto Serif', serif;
   color: black;
   margin-top: 15px;
 }
 
 .postbody {
   font-size: 15px;
-  font-family: sans-serif;
+  font-family: 'Noto Serif', serif;
   color: darkgray;
   margin-bottom: 5px;
 }
@@ -52,7 +56,7 @@ li div {
   color: darkgray;
   border-style: none;
   background-color: transparent;
-  font-family: "Luckiest Guy", cursive;
+  font-family: 'Noto Serif', serif;
   cursor: pointer;
   font-size: 15px;
 }
@@ -64,7 +68,7 @@ li div {
   color: black;
   border-style: none;
   background-color: transparent;
-  font-family: "Luckiest Guy", cursive;
+  font-family: 'Noto Serif', serif;
   cursor: pointer;
   font-size: 20px;
 }
@@ -84,20 +88,23 @@ h4 {
 }
 
 body {
-  display: flex;
-  flex-flow: row nowrap;
+  display: flex; 
+  /* flex-flow: row nowrap; */
   justify-content: center;
   align-items: center;
   align-content: center;
   max-height: 100vh;
   max-width: 90vw;
+  background-image: url("./images/background2.jpg");
+  background-size: cover;
+  min-height: 100%;
 }
 
 .bodywrapper {
   margin-left: 30px;
   margin-top: 5px;
   margin-right: 50px;
-  margin-top: 2vh;
+  margin-top: 300px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,12 +118,12 @@ body {
   display: flex;
   flex-flow: column wrap;
   align-items: flex-end;
-  font-family: "Luckiest Guy", cursive;
-  color: darkgray;
+  font-family: 'Noto Serif', serif;
+  color:yellow;
 }
 
 label {
-  font-family: "Pacifico", cursive;
+  font-family: 'Noto Serif', serif;
 }
 
 ul {
@@ -133,8 +140,8 @@ li {
   min-width: 200px;
   display: flex;
   flex-flow: row wrap;
-  color: darkgray;
-  font-family: sans-serif;
+  color: yellow;
+  font-family: 'Noto Serif', serif;
   list-style: none;
 }
 
@@ -161,9 +168,9 @@ h1 {
   margin-left: 2vw;
   align-self: flex-start;
   margin-left: 2vw;
-  font-family: "Pacifico", cursive;
+  font-family: 'Noto Serif', serif;
 }
 
 label {
-  font-family: sans-serif;
+  font-family: 'Noto Serif', serif;
 }

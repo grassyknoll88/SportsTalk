@@ -14,7 +14,7 @@ body{
 h3 {
   padding-right: 5vw;
   font-family:'Noto Serif', serif;
-  font-size: 60px;
+  font-size: 40px;
   color: orange;
 }
 
@@ -32,14 +32,14 @@ form {
   font-weight: bold;
   font-size: 18px;
   font-family: 'Noto Serif', serif;
-  color: white;
-  margin-top: 15px;
+  color: black;
+  margin-top: 30px;
 }
 
 .postbody {
   font-size: 15px;
   font-family: 'Noto Serif', serif;
-  color: white;
+  color: orange;
   margin-bottom: 5px;
 }
 
@@ -96,7 +96,7 @@ body {
   align-content: center;
   max-height: 100vh;
   max-width: 90vw;
-  background-image: url("./images/background2.jpg");
+  background-image: url("./images/background5.jpg");
   background-size: cover;
   min-height: 100%;
 }
@@ -114,7 +114,7 @@ body {
 }
 
 .home{
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .navbar {

@@ -96,7 +96,7 @@ body {
   align-content: center;
   max-height: 100vh;
   max-width: 90vw;
-  background-image: url("background2.jpg");
+  background-image: url("./images/background2.jpg");
   background-size: cover;
   min-height: 100%;
 }

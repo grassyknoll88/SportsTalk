@@ -13,10 +13,10 @@ https://sportstalk.herokuapp.com
 
 ##### Technologies implemented
 
-node.js
-Express
-Handblebars
-mySQL
+node.js,
+Express.js,
+Handblebars,
+mySQL, 
 Sequelize
 
 
